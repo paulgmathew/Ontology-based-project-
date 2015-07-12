@@ -1,2 +1,3 @@
 # Ontology-based-project-
-RDF-XML based project where you have to decide what dish you have to make based on the ingredients you have and then select the nearest restaurant by calculating the path using A* algorithm  
+RDF-XML based project where you have to decide what dish you have to make based on the ingredients you have and then select the nearest restaurant by calculating the path using A* algorithm  .
+The idea behind this include building domain based ontologies to describe the preferred dish which can be prepared by calculating the similarities between the ingredients and the dishes .The developed system mainly consist of ontology building , document formalization ,similarity calculation. First, we utilize Protégé to develop the predetermined domain ontologies in which some related concepts are defined. Then, documents concerning ingredients and dishes are formalized by means of concept trees with weights and heuristics.
