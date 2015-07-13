@@ -1,0 +1,1675 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#"
+     xml:base="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#contains_ingrediants -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#contains_ingrediants">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#has_cooking_method -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#has_cooking_method"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#has_recipe_type -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#has_recipe_type"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#present_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#present_in">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Calorie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Calorie">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Location">
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#cook_time -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#cook_time">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#difficulty_rating -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#difficulty_rating">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first>Difficult</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first>Easy</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first>Intermediate</rdf:first>
+                                        <rdf:rest rdf:resource="&rdf;nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <rdf:Description rdf:about="&owl;topDataProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Appetizers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Appetizers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Baking -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Baking">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BasicAndEasy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BasicAndEasy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BeansGrainsLegumes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BeansGrainsLegumes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Braising -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Braising">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Bread -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Bread">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BreadRollsMuffins -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BreadRollsMuffins">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Burgers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Burgers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CakesCupcakes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CakesCupcakes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CanapesAppetizers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CanapesAppetizers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Appetizers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CandyAndSweets -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CandyAndSweets">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CasserolesAndGratins -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CasserolesAndGratins">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cheese -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cheese">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dairy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cocktails -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cocktails">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cookies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cookies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Curing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Curing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dairy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dairy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#DeepFriedAppetizers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#DeepFriedAppetizers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Appetizers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Desserts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Desserts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#DipsAndSpreads -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#DipsAndSpreads">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dressings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dressings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#DryFruits -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#DryFruits">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Exclusive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Exclusive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RecipeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fast">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RecipeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Meat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Flour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Flour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fruit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fruit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Frying -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Frying">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GlutenFree -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GlutenFree">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RecipeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GrilledAppetizers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GrilledAppetizers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Appetizers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GrillingAndBarbequeing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GrillingAndBarbequeing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Healthy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Healthy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RecipeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Kosher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Kosher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RecipeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MakeAhead -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MakeAhead">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RecipeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Meat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Meat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NoCook -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NoCook">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RecipeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NonRedMeat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NonRedMeat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Meat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NonSpicyRedMeat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NonSpicyRedMeat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RedMeat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Nuts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Nuts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#PastaAndNoodles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#PastaAndNoodles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Pickling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Pickling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#PieAndTarts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#PieAndTarts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Pizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Poaching -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Poaching">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Poultry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Poultry">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#PuddingAndCustards -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#PuddingAndCustards">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RecipeType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RecipeType"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RedMeat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RedMeat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Meat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Roasting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Roasting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Salads -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Salads">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Sandwiches -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Sandwiches">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SauceAndCondiments -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SauceAndCondiments">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SideDishes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SideDishes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SoupsAndStews -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SoupsAndStews">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SousVide -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SousVide">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Spices -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Spices">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SpicyRedMeat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SpicyRedMeat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RedMeat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StaffFavourite -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StaffFavourite">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RecipeType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SteamedAppetizers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SteamedAppetizers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Appetizers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Stewing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Stewing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StirFrying -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StirFrying">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CookingMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Stuffings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Stuffings">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ingrediants"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetarian -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetarian">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RecipeType"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#AllPurposeFlour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#AllPurposeFlour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Flour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#AlmondCake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#AlmondCake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CakesCupcakes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BaconBurgerWithCilantroAndYoghurt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BaconBurgerWithCilantroAndYoghurt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Burgers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Baking -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Baking">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Baking"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BananaLeafThaiCuisine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BananaLeafThaiCuisine">
+        <Location rdf:datatype="&xsd;string">17370PrestonRoad:</Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BasicAndEasy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BasicAndEasy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BasicAndEasy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Basil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Basil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Beans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Beans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Beetroot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Beetroot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BlackAndWhiteCupcake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BlackAndWhiteCupcake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CakesCupcakes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BlackBeans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BlackBeans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Nuts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BlackPepper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BlackPepper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Spices"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BloodOrangeRosemary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BloodOrangeRosemary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cocktails"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BombayChopStick -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BombayChopStick">
+        <Location rdf:datatype="&xsd;string">WestCampbell:</Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Braising -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Braising">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Braising"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BreadCrumbs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BreadCrumbs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Bread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CafeFino -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CafeFino">
+        <Location rdf:datatype="&xsd;string">7522CampbellRd:</Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CaramelApple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CaramelApple"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CaramelLayerCake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CaramelLayerCake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CakesCupcakes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Carrot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Carrot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Chicken -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Chicken">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Meat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#ChickenDumpling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#ChickenDumpling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SteamedAppetizers"/>
+        <cook_time rdf:datatype="&xsd;string">1 hr:</cook_time>
+        <Calorie rdf:datatype="&xsd;integer">400</Calorie>
+        <Location rdf:datatype="&xsd;string">GeishaSteakAndSushiLounge:3801BushTurnPike:</Location>
+        <difficulty_rating rdf:datatype="&xsd;string">intermediate:</difficulty_rating>
+        <has_cooking_method rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Baking"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Basil"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Chicken"/>
+        <has_recipe_type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Exclusive"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GreenChilly"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#ChristmasBoliedFruitCake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#ChristmasBoliedFruitCake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CakesCupcakes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#ChristmasMoringCasserole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#ChristmasMoringCasserole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CasserolesAndGratins"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CinnamonRaisinAlmondFlouMuffin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CinnamonRaisinAlmondFlouMuffin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BreadRollsMuffins"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Coconut -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Coconut">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CoconutRiceSalad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CoconutRiceSalad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BeansGrainsLegumes"/>
+        <cook_time rdf:datatype="&xsd;string">30 min:</cook_time>
+        <Calorie rdf:datatype="&xsd;integer">500</Calorie>
+        <Location rdf:datatype="&xsd;string">BombayChopstick:WestCampbell:</Location>
+        <difficulty_rating rdf:datatype="&xsd;string">easy:</difficulty_rating>
+        <has_cooking_method rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Braising"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Coconut"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CorianderLeaves"/>
+        <has_recipe_type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Curing"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ginger"/>
+        <has_recipe_type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Healthy"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Rice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CorianderLeaves -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CorianderLeaves">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CorianderPowder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CorianderPowder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Spices"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Corn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Corn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CornCasserole -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CornCasserole">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CasserolesAndGratins"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CrackerSnacks -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CrackerSnacks">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CandyAndSweets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CranberryAlmondFlourBread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CranberryAlmondFlourBread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BreadRollsMuffins"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CranberryAlmondMuffin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CranberryAlmondMuffin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BreadRollsMuffins"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CreamCheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CreamCheese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cheese"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Crossaints -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Crossaints">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BreadRollsMuffins"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cucumber -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cucumber">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Curing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Curing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Curing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cutlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cutlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#DeepFriedAppetizers"/>
+        <cook_time rdf:datatype="&xsd;string">1-1.5 hr:</cook_time>
+        <Calorie rdf:datatype="&xsd;integer">250</Calorie>
+        <Location rdf:datatype="&xsd;string">BomBayChopStick:WestCampbell:</Location>
+        <difficulty_rating rdf:datatype="&xsd;string">intermediate:</difficulty_rating>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Beans"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Beetroot"/>
+        <present_in rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BombayChopStick"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BreadCrumbs"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Carrot"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CorianderLeaves"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CorianderPowder"/>
+        <has_cooking_method rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Frying"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GaramMasala"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ginger"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GreenChilly"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Lemon"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Onions"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Peas"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Potatoes"/>
+        <has_recipe_type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StaffFavourite"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Turmeric"/>
+        <has_recipe_type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetarian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#DeliNewsBagels -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#DeliNewsBagels">
+        <Location rdf:datatype="&xsd;string">17620PrestonRd:</Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dhokla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dhokla">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SteamedAppetizers"/>
+        <Calorie rdf:datatype="&xsd;integer">200</Calorie>
+        <cook_time rdf:datatype="&xsd;integer">45 min:</cook_time>
+        <Location rdf:datatype="&xsd;string">BombayChopStick:WestCampbell:</Location>
+        <difficulty_rating rdf:datatype="&xsd;string">easy:</difficulty_rating>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#AllPurposeFlour"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BlackPepper"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BreadCrumbs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Exclusive -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Exclusive">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Exclusive"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#FarmerPorkBurgerWithBreadAndButterZuchiniPickles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#FarmerPorkBurgerWithBreadAndButterZuchiniPickles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Burgers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fast"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#FrenchBread -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#FrenchBread">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Bread"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#FrenchFries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#FrenchFries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#DeepFriedAppetizers"/>
+        <Calorie rdf:datatype="&xsd;integer">150</Calorie>
+        <difficulty_rating rdf:datatype="&xsd;string">easy:</difficulty_rating>
+        <present_in rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BombayChopStick"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Potatoes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Frying -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Frying">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Frying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GaramMasala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GaramMasala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Spices"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GeishaSteakAndSushiLounge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GeishaSteakAndSushiLounge">
+        <Location rdf:datatype="&xsd;string">3801BushTurnPike:</Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ginger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ginger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GlutenFree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GlutenFree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GlutenFree"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GoldenOnionCheeseBurgerWithMayonnaise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GoldenOnionCheeseBurgerWithMayonnaise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Burgers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GranolaChocholateBark -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GranolaChocholateBark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CandyAndSweets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GreenChilly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GreenChilly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GrillingAndBarbequeing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GrillingAndBarbequeing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GrillingAndBarbequeing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ham -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ham">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NonRedMeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Healthy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Healthy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Healthy"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Idli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Idli"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#IndianCuminFriedRiceWithSpinach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#IndianCuminFriedRiceWithSpinach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BeansGrainsLegumes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#JackintheBox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#JackintheBox">
+        <Location rdf:datatype="&xsd;string">2230CoitRoad:</Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Kosher -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Kosher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Kosher"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#KurdishWhiteBeansWithTomatoAndLime -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#KurdishWhiteBeansWithTomatoAndLime">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BeansGrainsLegumes"/>
+        <Calorie rdf:datatype="&xsd;integer">250</Calorie>
+        <cook_time rdf:datatype="&xsd;string">45 min:</cook_time>
+        <Location rdf:datatype="&xsd;string">CafeFino:7522CampbellRd:</Location>
+        <difficulty_rating rdf:datatype="&xsd;string">intermediate:</difficulty_rating>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BlackBeans"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Lemon"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Rice"/>
+        <has_cooking_method rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SousVide"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Tomato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Lemon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Lemon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MakeAhead -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MakeAhead">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MakeAhead"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MascarponeCheese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MascarponeCheese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cheese"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MilanoPizza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MilanoPizza">
+        <Location rdf:datatype="&xsd;string">7659McCallum:</Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MilkChocolateNutsAndRaisinCluster -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MilkChocolateNutsAndRaisinCluster">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CandyAndSweets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Momos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Momos"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NoCook -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NoCook">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NoCook"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Onions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Onions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Paneer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Paneer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GrilledAppetizers"/>
+        <cook_time rdf:datatype="&xsd;string">20 - 30 min:</cook_time>
+        <Calorie rdf:datatype="&xsd;integer">290</Calorie>
+        <Location rdf:datatype="&xsd;string">BombayChopStick:WestCampbell:</Location>
+        <difficulty_rating rdf:datatype="&xsd;string">easy:</difficulty_rating>
+        <present_in rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BombayChopStick"/>
+        <has_recipe_type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fast"/>
+        <has_cooking_method rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Frying"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Paneer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Peach -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Peach">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fruit"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#PeachAndProscuittoCanapes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#PeachAndProscuittoCanapes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CanapesAppetizers"/>
+        <cook_time rdf:datatype="&xsd;string">20-30 min:</cook_time>
+        <Calorie rdf:datatype="&xsd;integer">2400</Calorie>
+        <Location rdf:datatype="&xsd;string">SalazaMexican:DavenPortRd:</Location>
+        <difficulty_rating rdf:datatype="&xsd;string">easy:</difficulty_rating>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Basil"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CreamCheese"/>
+        <has_recipe_type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fast"/>
+        <has_cooking_method rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Frying"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ham"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Lemon"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#MascarponeCheese"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Peach"/>
+        <present_in rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SalazaMexican"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Shallots"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Peas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Peas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Pickling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Pickling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Pickling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Poaching -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Poaching">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Poaching"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Pork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Pork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NonRedMeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Potatoes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Potatoes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Rice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Rice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Flour"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RoastBeef -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RoastBeef">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NonSpicyRedMeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Roasting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Roasting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Roasting"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RockFishSeafood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#RockFishSeafood">
+        <Location rdf:datatype="&xsd;string">PavillionNorth:</Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SalazaMexican -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SalazaMexican">
+        <Location rdf:datatype="&xsd;string">DavenPortRd:</Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Salmon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Salmon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Fish"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Samosa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Samosa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#DeepFriedAppetizers"/>
+        <cook_time rdf:datatype="&xsd;string">1 - 1.5 hr:</cook_time>
+        <Calorie rdf:datatype="&xsd;integer">250</Calorie>
+        <Location rdf:datatype="&xsd;integer">BombayChopStick:WestCampbell:</Location>
+        <difficulty_rating rdf:datatype="&xsd;string">intermediate:</difficulty_rating>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#AllPurposeFlour"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Beans"/>
+        <present_in rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BombayChopStick"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CorianderPowder"/>
+        <has_cooking_method rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Frying"/>
+        <has_recipe_type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GlutenFree"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Onions"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Peas"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Potatoes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Shallots -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Shallots">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Shrimp -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Shrimp">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Meat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#ShrimpAndLemonSkewer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#ShrimpAndLemonSkewer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GrilledAppetizers"/>
+        <Calorie rdf:datatype="&xsd;integer">300</Calorie>
+        <cook_time rdf:datatype="&xsd;string">40-30 min:</cook_time>
+        <Location rdf:datatype="&xsd;string">RockFishSeaFood:PavillionNorth:</Location>
+        <difficulty_rating rdf:datatype="&xsd;string">easy:</difficulty_rating>
+        <has_cooking_method rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Baking"/>
+        <has_recipe_type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Healthy"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Lemon"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Shrimp"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SmokedSalmonMousseCanapes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SmokedSalmonMousseCanapes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CanapesAppetizers"/>
+        <Calorie rdf:datatype="&xsd;integer">250</Calorie>
+        <cook_time rdf:datatype="&xsd;string">40 min:</cook_time>
+        <difficulty_rating rdf:datatype="&xsd;string">Easy:</difficulty_rating>
+        <Location rdf:datatype="&xsd;string">GeishaSteakAndSushiLounge:3801BushTurnPike:</Location>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BlackPepper"/>
+        <has_cooking_method rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Braising"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Cucumber"/>
+        <present_in rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GeishaSteakAndSushiLounge"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Lemon"/>
+        <has_recipe_type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NoCook"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Salmon"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Tarragon"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SoftAndChewyMarshmellows -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SoftAndChewyMarshmellows">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#CandyAndSweets"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SousVide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SousVide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SousVide"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SpicedRiceBreakfastPorridge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SpicedRiceBreakfastPorridge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BeansGrainsLegumes"/>
+        <cook_time rdf:datatype="&xsd;string">30 min:</cook_time>
+        <Calorie rdf:datatype="&xsd;integer">400</Calorie>
+        <Location rdf:datatype="&xsd;string">SelazaMexican:DavenPortRd:</Location>
+        <difficulty_rating rdf:datatype="&xsd;string">easy:</difficulty_rating>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ginger"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GreenChilly"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Rice"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Tomato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StaffFavourite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StaffFavourite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StaffFavourite"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Steak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Steak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NonSpicyRedMeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StewedWhiteBeansWithChillyAndHerbs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StewedWhiteBeansWithChillyAndHerbs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#BeansGrainsLegumes"/>
+        <Calorie rdf:datatype="&xsd;integer">350</Calorie>
+        <cook_time rdf:datatype="&xsd;string">60 min:</cook_time>
+        <Location rdf:datatype="&xsd;string">BananaLeaf:17370PrestonRoad:</Location>
+        <difficulty_rating rdf:datatype="&xsd;string">intermediate:</difficulty_rating>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Ginger"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#GreenChilly"/>
+        <has_recipe_type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Healthy"/>
+        <has_cooking_method rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#SousVide"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Tomato"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Turmeric"/>
+        <contains_ingrediants rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#WhiteBeans"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Stewing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Stewing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Stewing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StirFrying -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StirFrying">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StirFrying"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StrawberriesAndCherries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#StrawberriesAndCherries"/>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Tarragon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Tarragon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Spices"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#TejanoBBQ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#TejanoBBQ">
+        <Location rdf:datatype="&xsd;string">ValeroCoidRd</Location>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Tomato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Tomato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetable"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Turmeric -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Turmeric">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Spices"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Veal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Veal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#NonSpicyRedMeat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetarian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetarian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Vegetarian"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#WhiteBeans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#WhiteBeans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Nuts"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#dish1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#dish1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/paulgmathew/ontologies/2015/3/dish.owl#Dish"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
